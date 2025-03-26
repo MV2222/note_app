@@ -1,0 +1,75 @@
+<section>
+  <article class="note-form-container">
+    <form class="note-form" action="/api/addNote" method="post">
+      <div class="note-form-field">
+        <label class="note-form-label" for="noteid">Note ID :</label>
+        <input
+          required
+          class="note-form-input"
+          name="noteId"
+          id="noteid"
+          type="text"
+          placeholder="Enter the Note ID"
+        />
+      </div>
+
+      <div class="note-form-field">
+        <label class="note-form-label" for="notename">Note Name :</label>
+        <input
+          required
+          class="note-form-input"
+          name="noteName"
+          id="notename"
+          type="text"
+          placeholder="Enter Name of the Note"
+        />
+      </div>
+
+      <div class="note-form-field">
+        <label class="note-form-label" for="notedes">Description :</label>
+        <input
+          required
+          class="note-form-input"
+          name="description"
+          id="notedes"
+          type="text"
+          placeholder="Enter the Note Description"
+        />
+      </div>
+
+      <div class="note-form-field">
+        <label class="note-form-label">Status: </label>
+
+        <input
+          required
+          id="status_active"
+          type="radio"
+          name="status"
+          value="Active"
+        />
+        <label for="status_active">Active</label>
+
+        <input
+          {{! required }}
+          id="status_inactive"
+          type="radio"
+          name="status"
+          value="Inactive"
+        />
+        <label for="status_inactive">Inactive</label>
+
+        <input
+          {{! required }}
+          id="status_completed"
+          type="radio"
+          name="status"
+          value="Completed"
+        />
+        <label for="status_completed">Completed</label>
+      </div>
+
+      <button class="btn note-form-btn" type="submit">Create Note</button>
+    </form>
+  </article>
+  <p class="error_msg">{{error}}</p>
+</section>

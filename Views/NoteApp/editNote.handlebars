@@ -1,0 +1,116 @@
+<h1>Update A Note</h1>
+<section>
+  <article class="note-form-container">
+    <form class="note-form" action="/api/edit/{{payload._id}}" method="post">
+      <div class="note-form-field">
+        <label class="note-form-label" for="noteid">Note id :</label>
+        <input
+          class="note-form-input"
+          name="noteId"
+          id="noteid"
+          type="text"
+          value="{{payload.noteId}}"
+        />
+      </div>
+
+      <div class="note-form-field">
+        <label class="note-form-label" for="notename">Note Name :</label>
+        <input
+          class="note-form-input"
+          name="noteName"
+          id="notename"
+          type="text"
+          value="{{payload.noteName}}"
+        />
+      </div>
+
+      <div class="note-form-field">
+        <label class="note-form-label" for="notedes">Description :</label>
+        <input
+          class="note-form-input"
+          name="description"
+          id="notedes"
+          type="text"
+          value="{{payload.description}}"
+        />
+      </div>
+
+      {{!-- <div class="note-form-field">
+        <label class="note-form-label" for="notest">Note Status :</label>
+        <input
+          class="note-form-input"
+          name="status"
+          id="notest"
+          type="text"
+          value="{{payload.status}}"
+        />
+      </div> --}}
+
+      {{!-- <div class="note-form-field note-form-status-field">
+        <label class="note-form-label">Status: </label>
+
+        <input
+          id="status_active"
+          type="radio"
+          name="status"
+          value="Active"
+          {{#if (payload.status "Active")}}checked{{/if}}
+        />
+
+        <label class="note-form-label" for="status_active">Active</label>
+
+        <input
+          id="status_inactive"
+          type="radio"
+          name="status"
+          value="Inactive"
+          {{#if (payload.status "Active")}}checked{{/if}}
+        />
+        <label class="note-form-label" for="status_inactive">Inactive</label>
+
+        <input
+          id="status_completed"
+          type="radio"
+          name="status"
+          value="Completed"
+          {{#if (payload.status "Active")}}checked{{/if}}
+        />
+        <label class="note-form-label" for="status_completed">Completed</label>
+      </div> --}}
+
+      <div class="note-form-field note-form-status-field">
+        <label class="note-form-label">Status: </label>
+
+        <input
+          id="status_active"
+          type="radio"
+          name="status"
+          value="Active"
+          {{#if (eq payload.status "Active")}}checked{{/if}}
+        />
+        <label class="note-form-label" for="status_active">Active</label>
+
+        <input
+          id="status_inactive"
+          type="radio"
+          name="status"
+          value="Inactive"
+          {{#if (eq payload.status "Inactive")}}checked{{/if}}
+        />
+        <label class="note-form-label" for="status_inactive">Inactive</label>
+
+        <input
+          id="status_completed"
+          type="radio"
+          name="status"
+          value="Completed"
+          {{#if (eq payload.status "Completed")}}checked{{/if}}
+        />
+        <label class="note-form-label" for="status_completed">Completed</label>
+
+      </div>
+
+      <button class="btn note-form-btn" type="submit">Update Note</button>
+    </form>
+  </article>
+</section>

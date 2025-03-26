@@ -1,0 +1,12 @@
+{{#if payload}}
+  <div class="single_note_container">
+    <ul class="single_note_list">
+      <li class="single_note_list_item">Note ID: &nbsp;{{payload.noteId}}</li>
+      <li class="single_note_list_item">Note Name: &nbsp;{{payload.noteName}}</li>
+      <li class="single_note_list_item">Note Description: &nbsp;{{payload.description}}</li>
+      <li class="single_note_list_item">Note Status: &nbsp;{{payload.status}}</li>
+    </ul>
+  </div>
+{{else}}
+  <h1 class="single_note_list_error_message">No such note found...</h1>
+{{/if}}

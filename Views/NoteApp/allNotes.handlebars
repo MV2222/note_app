@@ -1,0 +1,33 @@
+<section>
+  <article class="all_notes_section">
+    {{#each payload}}
+      <div class="all_notes_container">
+        <ul class="all_notes_list">
+          <li class="all_notes_list_item">Note ID: &nbsp;{{this.noteId}}</li>
+          <li class="all_notes_list_item">Note Name: &nbsp;{{this.noteName}}</li>
+          <li class="all_notes_list_item">Note Description: &nbsp;{{this.description}}</li>
+          <li class="all_notes_list_item">Note Status: &nbsp;{{this.status}}</li>
+        </ul>
+        <div class="all_notes_btn_container">
+          <a href="/api/{{this._id}}" class="all_notes_btn_link">
+            <button class="btn all_notes_btn_info">
+              Info
+            </button>
+          </a>
+          <a href="/api/edit/{{this._id}}" class="all_notes_btn_link">
+            <button class="btn all_notes_btn_edit">
+              Edit
+            </button>
+          </a>
+          <a href="/api/delete/{{this._id}}" class="all_notes_btn_link">
+            <button class="btn all_notes_btn_delete">
+              Delete
+            </button>
+          </a>
+        </div>
+      </div>
+    {{else}}
+      <h2 class="no_notes_msg">No notes found. Please create one note first....</h2>
+    {{/each}}
+  </article>
+</section>

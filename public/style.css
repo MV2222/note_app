@@ -1,0 +1,260 @@
+/* ****************************************** */
+/* GENERAL */
+/* ****************************************** */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+
+  background-image: linear-gradient(to bottom right, #555454 10%, #000000 100%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4.8rem;
+
+  padding: 2.4rem 3.6rem;
+
+  color: white;
+}
+
+.btn {
+  font-size: 1.8rem;
+  font-weight: 600;
+
+  padding: 1.2rem 1.8rem;
+  outline: none;
+  border: none;
+  border-radius: 1.2rem;
+
+  transition: all 0.4s;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: gold;
+  box-shadow: 0 10px 25px #101010;
+}
+
+/* ****************************************** */
+/* NAVIGATION PANEL */
+/* ****************************************** */
+.nav-bar-container {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.nav-links-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 2.4rem;
+  color: white;
+
+  text-transform: uppercase;
+  font-weight: 600;
+
+  transition: all 0.3s ease-in-out;
+}
+.nav-link:hover {
+  color: black;
+}
+
+/* ****************************************** */
+/* FOOTER */
+/* ****************************************** */
+.footer__signature {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__copyright {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #777;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__logo {
+  margin-left: 0.8rem;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+/* ****************************************** */
+/* HOME PAGE */
+/* ****************************************** */
+.home_page_heading {
+  font-size: 4.8rem;
+}
+
+.home_page_subheading {
+  width: 75vw;
+  font-size: 2.4rem;
+}
+/* ****************************************** */
+/* ADD NOTE FORM */
+/* ****************************************** */
+.note-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+
+  padding: 2.4rem 3.6rem;
+  font-size: 2.4rem;
+}
+
+.note-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1.2rem;
+}
+
+.note-form-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.note-form-label {
+  font-weight: 600;
+}
+
+.note-form-input {
+  font-size: 2.4rem;
+
+  padding: 0.8rem 1.2rem;
+  border: none;
+  outline: none;
+  border-radius: 2.4rem;
+}
+
+.error_msg {
+  font-size: 2.4rem;
+  text-align: center;
+  color: rgb(200, 0, 0);
+}
+
+/* ****************************************** */
+/* ALL NOTES */
+/* ****************************************** */
+.all_notes_section {
+  max-height: 74vh;
+  width: 100vw;
+
+  padding: 2rem 0;
+
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.all_notes_container {
+  width: 75vw;
+
+  background-image: linear-gradient(to right, #454545, #212121);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 1.2rem;
+  padding: 2.4rem;
+  box-shadow: 0 0 15px black;
+
+  margin: 0 auto 3.6rem auto;
+
+  transition: all 0.4s;
+}
+.all_notes_container:hover {
+  width: 78vw;
+}
+
+.all_notes_list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+
+  list-style: none;
+}
+
+.all_notes_list_item {
+  font-size: 2.4rem;
+}
+
+.all_notes_btn_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.all_notes_btn_link {
+  text-decoration: none;
+  color: black;
+
+  transition: all 0.4s;
+}
+.all_notes_btn_link:hover {
+  text-decoration: underline;
+}
+
+.no_notes_msg {
+  font-size: 2.4rem;
+  color: rgb(200, 0, 0);
+}
+
+/* ****************************************** */
+/* ALL NOTES */
+/* ****************************************** */
+.single_note_container {
+  background-image: linear-gradient(to right, #454545, #212121);
+  padding: 3.6rem 4.8rem;
+  border-radius: 1.2rem;
+
+  box-shadow: 0 0 15px black;
+}
+
+.single_note_list {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.single_note_list_item {
+  font-size: 2.4rem;
+}
+
+.single_note_list_error_message {
+  font-size: 2.4rem;
+  color: rgb(200, 0, 0);
+}
