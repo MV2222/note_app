@@ -103,14 +103,37 @@ body {
 /* ****************************************** */
 /* HOME PAGE */
 /* ****************************************** */
+.home_page_section {
+  width: 75vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.6rem;
+}
+
 .home_page_heading {
   font-size: 4.8rem;
 }
 
+.home_page_content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.8rem;
+}
+
 .home_page_subheading {
-  width: 75vw;
   font-size: 2.4rem;
 }
+
+.home_page_list {
+  margin-left: 2rem;
+}
+
+.home_page_list_item {
+  font-size: 2.4rem;
+}
+
 /* ****************************************** */
 /* ADD NOTE FORM */
 /* ****************************************** */
